@@ -204,8 +204,32 @@
     crossorigin="anonymous"></script>
   <script src="./cartoon.js"></script>
   <script>
-   sessionStorage.setItem("Username", "Hamza");
-   let data = sessionStorage.getItem("Username");
+   // Storing data in session storage
+sessionStorage.setItem('email', 'john.doe@example.com');
+sessionStorage.setItem('Password', 8765);
+
+
+// Retrieving data from session storage
+const storedEmail = sessionStorage.getItem('email');
+const storedPassword = sessionStorage.getItem('Password');
+
+
+// Matching the retrieved data
+const inputEmail = 'john.doe@example.com';
+
+
+if (storedEmail === inputEmail) {
+    alert('Email matches!');
+} else {
+  alert('Email does not match');
+}
+
+const inputPassword = 8765;
+if (storedPassword === inputPassword) {
+    alert('Password match');
+} else {
+    alert('Password does not match');
+}
 
   </script>
 </body>
